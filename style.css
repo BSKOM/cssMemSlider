@@ -1,3 +1,17 @@
+@keyframes moveone {
+  0%, 1% {
+    opacity: 1;
+    transform: translateY(-300px);
+  }
+}
+
+@keyframes movetwo {
+  0%, 1% {
+    opacity: 1;
+    transform: translateY(-300px);
+  }
+}
+
 h1 {
   text-align: center;
 }
@@ -18,6 +32,7 @@ h1 {
   flex-direction: column;
   max-height: 300px;
   overflow: hidden;
+  background-color: darkgreen;
 }
 
 img.gallery-fullsize {
@@ -53,7 +68,6 @@ div.items {
   width: 16%;
 }
 
-
 .prev1, .next1 {
   background-image: url("images/1s.jpg");
 }
@@ -79,7 +93,17 @@ label.gallery-label {
 }
 
 .gallery-item1:checked~.figure>.img1 {
-  order: -1;
+  opacity: 0;
+  display: block;
+  animation: moveone 5s 0.1s linear 1;
+  opacity: 1;
+}
+
+.gallery-item1:checked~.figure>.img2 {
+  opacity: 0;
+  display: block;
+  animation: movetwo 5s linear 1;
+  opacity: 1;
 }
 
 .gallery-item1:checked~.prevs>.prev4 {
@@ -96,7 +120,17 @@ label.gallery-label {
 }
 
 .gallery-item2:checked~.figure>.img2 {
-  order: -1;
+  opacity: 0;
+  display: block;
+  animation: moveone 5s 0.1s linear 1;
+  opacity: 1;
+}
+
+.gallery-item2:checked~.figure>.img3 {
+  opacity: 0;
+  display: block;
+  animation: movetwo 5s linear 1;
+  opacity: 1;
 }
 
 .gallery-item2:checked~.prevs>.prev1 {
@@ -113,7 +147,17 @@ label.gallery-label {
 }
 
 .gallery-item3:checked~.figure>.img3 {
-  order: -1;
+  opacity: 0;
+  display: block;
+  animation: moveone 5s 0.1s linear 1;
+  opacity: 1;
+}
+
+.gallery-item3:checked~.figure>.img4 {
+  opacity: 0;
+  display: block;
+  animation: movetwo 5s linear 1;
+  opacity: 1;
 }
 
 .gallery-item3:checked~.prevs>.prev2 {
@@ -130,7 +174,17 @@ label.gallery-label {
 }
 
 .gallery-item4:checked~.figure>.img4 {
-  order: -1;
+  opacity: 0;
+  display: block;
+  animation: moveone 5s 0.1s linear 1;
+  opacity: 1;
+}
+
+.gallery-item4:checked~.figure>.img5 {
+  opacity: 0;
+  display: block;
+  animation: movetwo 5s linear 1;
+  opacity: 1;
 }
 
 .gallery-item4:checked~.prevs>.prev3 {
@@ -144,8 +198,4 @@ label.gallery-label {
 .gallery-item4:checked~.items>.item4>.gallery-preview {
   transform: scale(1.05);
   border: 1px solid green;
-}
-
-.figure>.gallery-fullsize {
-  display: block;
 }
