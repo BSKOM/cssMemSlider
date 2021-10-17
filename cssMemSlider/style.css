@@ -17,7 +17,7 @@ h1 {
 }
 
 #gallery-container {
-  position: relative;
+  /* position: relative; */
   width: 500px;
   height: auto;
   padding-bottom: 15px;
@@ -28,7 +28,7 @@ h1 {
 }
 
 .about {
-  margin:0 auto 1rem;
+  margin: 0 auto 1rem;
   max-width: 500px;
   width: 100%;
 }
@@ -96,6 +96,14 @@ input.gallery-selector {
 
 label.gallery-label {
   cursor: pointer;
+}
+
+.items>label.gallery-label {
+  padding: 0.5rem 0;
+}
+
+label.gallery-label:hover {
+  filter: invert(0.2);
 }
 
 .gallery-item1:checked~.figure>.img1 {
