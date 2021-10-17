@@ -1,14 +1,21 @@
+:root {
+  --m-height: 300;
+  /* --m-meage: 1px; */
+  --m-meage: 0.0625rem;
+}
+
 @keyframes moveone {
   0%, 1% {
     opacity: 1;
-    transform: translateY(-300px);
+    transform: translateY(calc(var(--m-height) * var(--m-meage)*-1));
   }
 }
 
 @keyframes movetwo {
   0%, 1% {
     opacity: 1;
-    transform: translateY(-300px);
+    transform: translateY(calc(var(--m-height) * var(--m-meage)*-1));
+    /* transform: translateY(-300px); */
   }
 }
 
@@ -18,25 +25,25 @@ h1 {
 
 #gallery-container {
   /* position: relative; */
-  width: 500px;
+  width: calc(var(--m-meage)*500);
   height: auto;
-  padding-bottom: 15px;
+  padding-bottom: calc(var(--m-meage)*15);
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  border: 1px #aaaaaa solid;
+  border: var(--m-meage) #aaaaaa solid;
 }
 
 .about {
-  margin: 0 auto 1rem;
-  max-width: 500px;
+  margin: 0 auto calc(1*var(--m-meage));
+  max-width: calc(500*var(--m-meage));
   width: 100%;
 }
 
 .figure {
   display: flex;
   flex-direction: column;
-  max-height: 300px;
+  max-height: calc(var(--m-height)*var(--m-meage));
   overflow: hidden;
   background-color: rgba(212, 224, 212, 0.9);
 }
@@ -57,17 +64,17 @@ div.items {
 .prevs {
   display: flex;
   overflow: hidden;
-  width: 50px;
-  height: 50px;
-  margin-left: 20px;
+  width: calc(var(--m-meage)*50);
+  height: calc(var(--m-meage)*50);
+  margin-left: calc(var(--m-meage)*20);
 }
 
 .nexts {
-  margin-right: 20px;
+  margin-right: calc(var(--m-meage)*20);
   display: flex;
   overflow: hidden;
-  width: 50px;
-  height: 50px;
+  width: calc(var(--m-meage)*50);
+  height: calc(var(--m-meage)*50);
 }
 
 .gallery-preview {
@@ -157,7 +164,7 @@ label.gallery-label:hover {
 
 .gallery-item2:checked~.controls>.items>.item2>.gallery-preview {
   transform: scale(1.05);
-  border: 1px solid green;
+  border: calc(1*var(--m-meage)) solid green;
 }
 
 .gallery-item3:checked~.figure>.img3 {
@@ -184,7 +191,7 @@ label.gallery-label:hover {
 
 .gallery-item3:checked~.controls>.items>.item3>.gallery-preview {
   transform: scale(1.05);
-  border: 1px solid green;
+  border: calc(1*var(--m-meage)) solid green;
 }
 
 .gallery-item4:checked~.figure>.img4 {
@@ -211,5 +218,5 @@ label.gallery-label:hover {
 
 .gallery-item4:checked~.controls>.items>.item4>.gallery-preview {
   transform: scale(1.05);
-  border: 1px solid green;
+  border: calc(1*var(--m-meage)) solid green;
 }
