@@ -220,3 +220,54 @@ label.gallery-label:hover {
   transform: scale(1.05);
   border: calc(1*var(--m-meage)) solid green;
 }
+
+.texts {
+  overflow: hidden;
+}
+
+.text-items {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: calc(20*var(--m-meage));
+}
+
+.text {
+  width: calc(500*var(--m-meage));
+  margin-left: calc(-500*var(--m-meage));
+  margin-top: 50px;
+  text-align: left;
+}
+
+/* .gallery-item1:checked~.  */
+
+.gallery-item1:checked~.texts>.text-items>.text1 {
+  order: -1;
+  margin-top: 0;
+  transition-duration: 500ms;
+  transition-property: margin-left;
+  margin-left: calc(50*var(--m-meage));
+}
+
+.gallery-item2:checked~.texts>.text-items>.text2 {
+  order: -1;
+  margin-top: 0;
+  transition-duration: 500ms;
+  transition-property: margin-left;
+  margin-left: calc(50*var(--m-meage));
+}
+
+.gallery-item3:checked~.texts>.text-items>.text3 {
+  order: -1;
+  margin-top: 0;
+  transition-duration: 500ms;
+  transition-property: margin-left;
+  margin-left: calc(50*var(--m-meage));
+}
+
+.gallery-item4:checked~.texts>.text-items>.text4 {
+  order: -1;
+  margin-top: 0;
+  transition-duration: 500ms;
+  transition-property: margin-left;
+  margin-left: calc(50*var(--m-meage));
+}
