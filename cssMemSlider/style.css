@@ -213,14 +213,14 @@ label.gallery-label {
 .gallery-item4:checked~.figure>.img4 {
   opacity: 0;
   display: block;
-  animation: moveone 5s 0.1s linear 1;
+  animation: moveone 3s 0.1s linear 1;
   opacity: 1;
 }
 
 .gallery-item4:checked~.figure>.img5 {
   opacity: 0;
   display: block;
-  animation: movetwo 5s linear 1;
+  animation: movetwo 3s linear 1;
   opacity: 1;
 }
 
