@@ -52,17 +52,23 @@ img.gallery-fullsize {
   display: none;
 }
 
-div.items {
-  display: inline-block;
-}
-
 .controls {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+
+div.items {
+  /* margin-top: 0.4rem; */
+  display: flex;
+  width: 61%;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .prevs {
   display: flex;
+  align-items: center;
   overflow: hidden;
   width: calc(var(--m-meage)*50);
   height: calc(var(--m-meage)*50);
@@ -72,13 +78,19 @@ div.items {
 .nexts {
   margin-right: calc(var(--m-meage)*20);
   display: flex;
+  justify-content: space-between;
   overflow: hidden;
   width: calc(var(--m-meage)*50);
   height: calc(var(--m-meage)*50);
 }
 
+.hove {
+  padding:0.6rem 0 0.4rem;
+  width: 20%;
+}
+
 .gallery-preview {
-  width: 16%;
+  width: 100%;
 }
 
 .prev1, .next1 {
@@ -105,13 +117,17 @@ label.gallery-label {
   cursor: pointer;
 }
 
-.items>label.gallery-label {
+.items.hove {
   padding: 0.5rem 0;
 }
 
-label.gallery-label:hover {
+.hove:hover {
   filter: invert(0.2);
 }
+
+/* label.gallery-label:focus {
+  filter: invert(0.2);
+} */
 
 .gallery-item1:checked~.figure>.img1 {
   opacity: 0;
@@ -135,7 +151,7 @@ label.gallery-label:hover {
   order: -1;
 }
 
-.gallery-item1:checked~.controls>.items>.item1>.gallery-preview {
+.gallery-item1:checked~.controls>.items>.hove>.item1>.gallery-preview {
   transform: scale(1.05);
   border: 1px solid green;
 }
@@ -162,7 +178,7 @@ label.gallery-label:hover {
   order: -1;
 }
 
-.gallery-item2:checked~.controls>.items>.item2>.gallery-preview {
+.gallery-item2:checked~.controls>.items>.hove>.item2>.gallery-preview {
   transform: scale(1.05);
   border: calc(1*var(--m-meage)) solid green;
 }
@@ -189,7 +205,7 @@ label.gallery-label:hover {
   order: -1;
 }
 
-.gallery-item3:checked~.controls>.items>.item3>.gallery-preview {
+.gallery-item3:checked~.controls>.items>.hove>.item3>.gallery-preview {
   transform: scale(1.05);
   border: calc(1*var(--m-meage)) solid green;
 }
@@ -216,7 +232,7 @@ label.gallery-label:hover {
   order: -1;
 }
 
-.gallery-item4:checked~.controls>.items>.item4>.gallery-preview {
+.gallery-item4:checked~.controls>.items>.hove>.item4>.gallery-preview {
   transform: scale(1.05);
   border: calc(1*var(--m-meage)) solid green;
 }
