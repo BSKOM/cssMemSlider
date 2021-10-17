@@ -27,12 +27,18 @@ h1 {
   border: 1px #aaaaaa solid;
 }
 
+.about {
+  margin:0 auto 1rem;
+  max-width: 500px;
+  width: 100%;
+}
+
 .figure {
   display: flex;
   flex-direction: column;
   max-height: 300px;
   overflow: hidden;
-  background-color: darkgreen;
+  background-color: rgba(212, 224, 212, 0.9);
 }
 
 img.gallery-fullsize {
@@ -43,21 +49,21 @@ div.items {
   display: inline-block;
 }
 
+.controls {
+  display: flex;
+  justify-content: space-around;
+}
+
 .prevs {
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
   display: flex;
   overflow: hidden;
   width: 50px;
   height: 50px;
-  /* height: 48px; */
+  margin-left: 20px;
 }
 
 .nexts {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
+  margin-right: 20px;
   display: flex;
   overflow: hidden;
   width: 50px;
@@ -69,19 +75,19 @@ div.items {
 }
 
 .prev1, .next1 {
-  background-image: url("images/1s.jpg");
+  background-image: url("assets/1s.jpg");
 }
 
 .prev2, .next2 {
-  background-image: url("images/2s.jpg");
+  background-image: url("assets/2s.jpg");
 }
 
 .prev3, .next3 {
-  background-image: url("images/3s.jpg");
+  background-image: url("assets/3s.jpg");
 }
 
 .prev4, .next4 {
-  background-image: url("images/4s.jpg");
+  background-image: url("assets/4s.jpg");
 }
 
 input.gallery-selector {
@@ -95,26 +101,26 @@ label.gallery-label {
 .gallery-item1:checked~.figure>.img1 {
   opacity: 0;
   display: block;
-  animation: moveone 5s 0.1s linear 1;
+  animation: moveone 3s 0.1s linear 1;
   opacity: 1;
 }
 
 .gallery-item1:checked~.figure>.img2 {
   opacity: 0;
   display: block;
-  animation: movetwo 5s linear 1;
+  animation: movetwo 3s linear 1;
   opacity: 1;
 }
 
-.gallery-item1:checked~.prevs>.prev4 {
+.gallery-item1:checked~.controls>.prevs>.prev4 {
   order: -1;
 }
 
-.gallery-item1:checked~.nexts>.next2 {
+.gallery-item1:checked~.controls>.nexts>.next2 {
   order: -1;
 }
 
-.gallery-item1:checked~.items>.item1>.gallery-preview {
+.gallery-item1:checked~.controls>.items>.item1>.gallery-preview {
   transform: scale(1.05);
   border: 1px solid green;
 }
@@ -122,26 +128,26 @@ label.gallery-label {
 .gallery-item2:checked~.figure>.img2 {
   opacity: 0;
   display: block;
-  animation: moveone 5s 0.1s linear 1;
+  animation: moveone 3s 0.1s linear 1;
   opacity: 1;
 }
 
 .gallery-item2:checked~.figure>.img3 {
   opacity: 0;
   display: block;
-  animation: movetwo 5s linear 1;
+  animation: movetwo 3s linear 1;
   opacity: 1;
 }
 
-.gallery-item2:checked~.prevs>.prev1 {
+.gallery-item2:checked~.controls>.prevs>.prev1 {
   order: -1;
 }
 
-.gallery-item2:checked~.nexts>.next3 {
+.gallery-item2:checked~.controls>.nexts>.next3 {
   order: -1;
 }
 
-.gallery-item2:checked~.items>.item2>.gallery-preview {
+.gallery-item2:checked~.controls>.items>.item2>.gallery-preview {
   transform: scale(1.05);
   border: 1px solid green;
 }
@@ -149,26 +155,26 @@ label.gallery-label {
 .gallery-item3:checked~.figure>.img3 {
   opacity: 0;
   display: block;
-  animation: moveone 5s 0.1s linear 1;
+  animation: moveone 3s 0.1s linear 1;
   opacity: 1;
 }
 
 .gallery-item3:checked~.figure>.img4 {
   opacity: 0;
   display: block;
-  animation: movetwo 5s linear 1;
+  animation: movetwo 3s linear 1;
   opacity: 1;
 }
 
-.gallery-item3:checked~.prevs>.prev2 {
+.gallery-item3:checked~.controls>.prevs>.prev2 {
   order: -1;
 }
 
-.gallery-item3:checked~.nexts>.next4 {
+.gallery-item3:checked~.controls>.nexts>.next4 {
   order: -1;
 }
 
-.gallery-item3:checked~.items>.item3>.gallery-preview {
+.gallery-item3:checked~.controls>.items>.item3>.gallery-preview {
   transform: scale(1.05);
   border: 1px solid green;
 }
@@ -187,15 +193,15 @@ label.gallery-label {
   opacity: 1;
 }
 
-.gallery-item4:checked~.prevs>.prev3 {
+.gallery-item4:checked~.controls>.prevs>.prev3 {
   order: -1;
 }
 
-.gallery-item4:checked~.next>.next1 {
+.gallery-item4:checked~.controls>.nexts>.next1 {
   order: -1;
 }
 
-.gallery-item4:checked~.items>.item4>.gallery-preview {
+.gallery-item4:checked~.controls>.items>.item4>.gallery-preview {
   transform: scale(1.05);
   border: 1px solid green;
 }
