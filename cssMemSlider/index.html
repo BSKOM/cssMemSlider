@@ -8,24 +8,23 @@
 </head>
 
 <body>
-  <h1>Pure CSS flex:order slider</h1>
-  <div class="swiches">
-    <div class="sw1">
-      <span class="no"></span>
-      <span class="last"></span>
-    </div>
-    <div class="sw2">
-      <span class="no"></span>
-      <span class="last"></span>
-    </div>
-    <div class="sw3">
-      <span class="no"></span>
-      <span class="last"></span>
-    </div>
-    <div class="sw4">
-      <span class="no"></span>
-      <span class="last"></span>
-    </div>
+  <h1>CSS Memas Slider</h1>
+  <div class="about">
+    <p>
+      This type of slider is an incomplete prototype of the original type of sliders developed by me with the following
+      features: property order, radio input type tags, more than one label tag per input, as well as another key (not
+      implemented in this solution) component that should significantly simplify and expand capabilities.
+    </p>
+    <p>
+      It is assumed that upon completion of development, the slider on css will be widely used because it has a number of
+      advantages.
+    </p>
+    <p>
+      Slider repository:
+      <a href="https://github.com/BSKOM/css-slider.git">https://github.com/BSKOM/css-slider.git</a>. Join friends we will
+      work together)
+    </p>
+  
   </div>
   <div id="gallery-container">
     <input type="radio" name="gallery-list" class="gallery-selector gallery-item1" value="1.jpg" id="gallery-item1"
@@ -34,48 +33,54 @@
     <input type="radio" name="gallery-list" class="gallery-selector gallery-item3" value="3.jpg" id="gallery-item3" />
     <input type="radio" name="gallery-list" class="gallery-selector gallery-item4" value="4.jpg" id="gallery-item4" />
     <figure class="figure">
-      <img src="images/1.jpg" class="gallery-fullsize img1" />
-      <img src="images/2.jpg" class="gallery-fullsize img2" />
-      <img src="images/3.jpg" class="gallery-fullsize img3" />
-      <img src="images/4.jpg" class="gallery-fullsize img4" />
-      <img src="images/1.jpg" class="gallery-fullsize img5" />
+      <img src="assets/1.jpg" class="gallery-fullsize img1" />
+      <img src="assets/2.jpg" class="gallery-fullsize img2" />
+      <img src="assets/3.jpg" class="gallery-fullsize img3" />
+      <img src="assets/4.jpg" class="gallery-fullsize img4" />
+      <img src="assets/1.jpg" class="gallery-fullsize img5" />
     </figure>
-    <div class="prevs">
-      <label for="gallery-item1" class="gallery-label prev prev1"><img src="images/prev.svg" class="prev-img" /></label>
-
-      <label for="gallery-item2" class="gallery-label prev prev2"><img src="images/prev.svg" class="prev-img" /></label>
-
-      <label for="gallery-item3" class="gallery-label prev 
-      prev3"><img src="images/prev.svg" class="prev-img" />
-      </label>
-
-      <label for="gallery-item4" class="gallery-label prev prev4"><img src="images/prev.svg" class="prev-img" /></label>
+    <div class="texts">
+      <div class="text">
+  
+      </div>
+  
     </div>
-    <div class="items">
-      <label for="gallery-item1" class="gallery-label item item1"><img src="images/1s.jpg"
-          class="gallery-preview" /></label>
-
-      <label for="gallery-item2" class="gallery-label item item2"><img src="images/2s.jpg"
-          class="gallery-preview" /></label>
-
-      <label for="gallery-item3" class="gallery-label item item3">
-        <img src="images/3s.jpg" class="gallery-preview" />
-      </label>
-
-      <label for="gallery-item4" class="gallery-label item item4"><img src="images/4s.jpg"
-          class="gallery-preview" /></label>
+    <div class="controls">
+      <div class="prevs">
+        <label for="gallery-item1" class="gallery-label prev prev1"><img src="assets/prev.svg" class="prev-img" /></label>
+  
+        <label for="gallery-item2" class="gallery-label prev prev2"><img src="assets/prev.svg" class="prev-img" /></label>
+  
+        <label for="gallery-item3" class="gallery-label prev prev3"><img src="assets/prev.svg" class="prev-img" /></label>
+  
+        <label for="gallery-item4" class="gallery-label prev prev4"><img src="assets/prev.svg" class="prev-img" /></label>
+      </div>
+      <div class="items">
+        <label for="gallery-item1" class="gallery-label item item1"><img src="assets/1s.jpg"
+            class="gallery-preview" /></label>
+  
+        <label for="gallery-item2" class="gallery-label item item2"><img src="assets/2s.jpg"
+            class="gallery-preview" /></label>
+  
+        <label for="gallery-item3" class="gallery-label item item3"><img src="assets/3s.jpg"
+            class="gallery-preview" /></label>
+  
+        <label for="gallery-item4" class="gallery-label item item4"><img src="assets/4s.jpg"
+            class="gallery-preview" /></label>
+      </div>
+      <div class="nexts">
+        <label for="gallery-item1" class="gallery-label next next1"><img src="assets/next.svg" class="next-img" /></label>
+  
+        <label for="gallery-item2" class="gallery-label next next2"><img src="assets/next.svg" class="next-img" /></label>
+  
+        <label for="gallery-item3" class="gallery-label next next3"><img src="assets/next.svg" class="next-img" />
+        </label>
+  
+        <label for="gallery-item4" class="gallery-label next next4"><img src="assets/next.svg" class="next-img" /></label>
+      </div>
+  
     </div>
-    <div class="nexts">
-      <label for="gallery-item1" class="gallery-label next next1"><img src="images/next.svg" class="next-img" /></label>
-
-      <label for="gallery-item2" class="gallery-label next next2"><img src="images/next.svg" class="next-img" /></label>
-
-      <label for="gallery-item3" class="gallery-label next next3">
-        <img src="images/next.svg" class="next-img" />
-      </label>
-
-      <label for="gallery-item4" class="gallery-label next next4"><img src="images/next.svg" class="next-img" /></label>
-    </div>
+  
   </div>
 </body>
 
